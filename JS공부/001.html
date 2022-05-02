@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dd</title>
+  </head>
+  <body>
+    <script>
+      //string
+      let txt = "abcdefghikjklmnabc";
+      let txt2 = "mom said 'hello world'";
+      let txt3 = "mom said 'hello world'";
+      let number = "100error";
+
+      document.write(number + number, "<br>");
+      document.write(Number(number) + Number(number), "<br>");
+      document.write(parseInt(number) + parseInt(number), "<br>");
+      document.write(+number + +number, "<br>");
+      document.write(`txt:${txt}`, "<br>");
+      document.write(
+        `${parseInt(number)}+${parseInt(number)}=${
+          parseInt(number) + parseInt(number)
+        } `,
+        "<br>"
+      );
+
+      document.write(0 + "", "<br>");
+      document.write(typeof (0 + ""), "<br>");
+
+      document.write(Infinity + "", "<br>");
+      document.write(typeof (0 + ""), "<br>");
+
+      document.write(0 + "", "<br>");
+      document.write(true, "<br>");
+
+      document.write({} + "", "<br>");
+      document.write(typeof {}, "<br>");
+
+      document.write(0 + "", "<br>");
+      document.write(true, "<br>");
+      document.write(txt, "<br>");
+
+      document.write(`txt.indexof('f'): ${txt.indexOf("f")}`, "<br>");
+      document.write(`txt.indexof('fg'): ${txt.indexOf("fg")}`, "<br>");
+      document.write(`txt.indexof('z'): ${txt.indexOf("z")}`, "<br>");
+    </script>
+  </body>
+</html>
