@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html {
+        text-align: center;
+      }
+      button {
+        width: 100px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <img id="meImg" src="./thumb_crop_resize.jpg" alt="" />
+    <br />
+    <button>코딩!</button>
+    <p>프로그래밍 실력: <span id="num">1</span></p>
+    <p><span id="num2">4</span>번만 더!</p>
+    <script>
+      //나
+      const me = {
+        name: "Jason",
+        address: "Seoul",
+        phoneNum: "010-1234-1234",
+        programming: function (programSkill) {
+          programSkill.levelUp();
+        },
+        muscle: function (strength) {
+          strength.levelUp();
+        },
+      };
+      //프로그래밍 실력
+      const programSkill = {
+        level: 1,
+        levelUp: function () {
+          this.level++;
+        },
+      };
+      const restNum = {
+        num: 4,
+        levelUp: function () {
+          this.num--;
+        },
+      };
+      //레벨업
+      const myBtn = document.querySelector("button");
+      myBtn.addEventListener("click", function () {
+        me.programming(programSkill);
+        me.programming(restNum);
+        alert("level up!");
+        document.getElementById("num").innerHTML = programSkill.level;
+        document.getElementById("num2").innerHTML = restNum.num;
+        if (programSkill.level == 5) {
+          document.getElementById("meImg").src = "./test.jpg";
+          num2.parentElement.remove();
+        }
+      });
+    </script>
+  </body>
+</html>
