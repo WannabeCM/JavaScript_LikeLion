@@ -8,16 +8,46 @@
   </head>
   <body>
     <script>
-      const foods = ["짜장면", "뽁음밥", "해장국", "치킨"];
+      // const me = {
+      //     name: '한재현',
+      //     address: '제주도 제주시 인다 1길',
+      //     phoneNum: '010-8001-6536',
+      //     canWalk: function () {
+      //         console.log('재현이가 걷는다.');
+      //     },
+      //     teaching: function (student) {
+      //         student.levelUp();
+      //     }
+      // }
 
-      function FoodBot(foodNames) {
-        this.menu = foodNames;
-        this.sayMenu = function () {
-          console.log(this.menu[Math.floor(Math.random() * this.menu.length)]);
-        };
+      // const student = {
+      //     level: 1,
+      //     levelUp: function () {
+      //         this.level++;
+      //     }
+      // }
+
+      function Me(name, address, phoneNum) {
+        this.name = name;
+        this.address = address;
+        this.phoneNum = phoneNum;
       }
 
-      const foodBotMark1 = new FoodBot(foods);
+      Me.prototype.canWalk = function () {
+        console.log("재현이가 걷는다.");
+      };
+
+      Me.prototype.teaching = function (student) {
+        student.levelUp();
+      };
+
+      function Student(level) {
+        this.level = level;
+      }
+
+      Student.prototype.levelUp = function () {
+        this.level++;
+      };
     </script>
   </body>
 </html>
