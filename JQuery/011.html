@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>has demo</title>
+
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+  </head>
+
+  <body>
+    <p>1</p>
+    <p id="div1">2</p>
+    <p>3</p>
+    <span>test1</span><span>test2</span><span>test3</span>
+    <p>4</p>
+    <p>5</p>
+    <script>
+      $("p").append("Some appended text.");
+      $("p").prepend("Some prepended text.");
+      $("#div1").remove();
+    </script>
+  </body>
+</html>
