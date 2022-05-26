@@ -7,6 +7,14 @@
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
   </head>
   <body>
-    <script></script>
+    <button type="button" id="btn_data">클릭해주세요!</button>
+    <div id="data">data</div>
+    <script>
+      $("#btn_data").click(function () {
+        $("#data").load(
+          "https://raw.githubusercontent.com/paullabkorea/10000hour/main/index.html h1"
+        );
+      });
+    </script>
   </body>
 </html>
